@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Abdullah-Md Pro WhatsApp Generator v4.0</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/assets/css/animations.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-container">
+            <div class="whatsapp-loader">
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+                <div class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="loading-text">
+                <span class="loading-dots">Initializing Pro WhatsApp Engine</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Floating Action Buttons -->
+        <div class="fab-container">
+            <button class="fab main-fab" id="quick-generate">
+                <i class="fas fa-bolt"></i>
+            </button>
+            <button class="fab" id="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="fab" id="music-toggle">
+                <i class="fas fa-music"></i>
+            </button>
+            <button class="fab" id="support-btn">
+                <i class="fas fa-headset"></i>
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header class="glass-header">
+            <div class="header-grid">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <div class="logo-wrapper">
+                        <div class="logo-circle animate__animated animate__pulse animate__infinite">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring delay-1"></div>
+                            <div class="pulse-ring delay-2"></div>
+                        </div>
+                        <div class="logo-text">
+                            <h1 class="gradient-text">Abdullah-Md <span class="version">v4.0</span></h1>
+                            <p class="tagline">Pro WhatsApp Session Generator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <i class="fas fa-server"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="server-status">Online</span>
+                            <span class="stat-label">Status</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="active-users">0</span>
+                            <span class="stat-label">Active</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-key"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="total-sessions">0</span>
+                            <span class="stat-label">Sessions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <button class="btn-premium">
+                        <i class="fas fa-crown"></i>
+                        <span>Premium</span>
+                    </button>
+                    <div class="user-menu">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-dropdown">
+                            <a href="#"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#"><i class="fas fa-history"></i> History</a>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="#dashboard" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                            <div class="nav-indicator"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#generator" class="nav-link">
+                            <i class="fas fa-bolt"></i>
+                            <span>Generator</span>
+                            <div class="nav-indicator"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sessions" class="nav-link">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Sessions</span>
+                            <div class="nav-indicator"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#api" class="nav-link">
+                            <i class="fas fa-code"></i>
+                            <span>API</span>
+                            <div class="nav-indicator"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#analytics" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                            <div class="nav-indicator"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link">
+                            <i class="fas fa-cogs"></i>
+                            <span>Settings</span>
+                            <div class="nav-indicator"></div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Page -->
+            <section id="dashboard" class="page active">
+                <div class="dashboard-grid">
+                    <!-- Welcome Card -->
+                    <div class="welcome-card glass-card">
+                        <div class="welcome-content">
+                            <h2 class="welcome-title">
+                                <span class="greeting">Hello, Abdullah!</span>
+                                <span class="subtitle">Ready to generate WhatsApp sessions?</span>
+                            </h2>
+                            <p class="welcome-text">
+                                Create professional WhatsApp sessions with advanced pairing strategies, 
+                                multi-fallback systems, and enterprise-grade security.
+                            </p>
+                            <div class="welcome-actions">
+                                <button class="btn-action-primary" id="quick-start">
+                                    <i class="fas fa-rocket"></i>
+                                    Quick Start
+                                </button>
+                                <button class="btn-action-secondary">
+                                    <i class="fas fa-play-circle"></i>
+                                    Watch Tutorial
+                                </button>
+                            </div>
+                        </div>
+                        <div class="welcome-illustration">
+                            <div class="phone-animation">
+                                <div class="phone-screen">
+                                    <div class="whatsapp-ui">
+                                        <!-- Animated WhatsApp UI -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="stats-cards">
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" id="success-rate">100%</h3>
+                                <p class="stat-label">Success Rate</p>
+                                <div class="stat-trend up">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>5.2%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" id="avg-time">2.4s</h3>
+                                <p class="stat-label">Avg. Generation Time</p>
+                                <div class="stat-trend down">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>1.1s</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon primary">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" id="fallbacks-used">0</h3>
+                                <p class="stat-label">Fallbacks Used</p>
+                                <div class="stat-trend neutral">
+                                    <i class="fas fa-minus"></i>
+                                    <span>0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon info">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 class="stat-number" id="security-level">A+</h3>
+                                <p class="stat-label">Security Score</p>
+                                <div class="stat-trend up">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>99.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions glass-card">
+                        <h3 class="section-title">
+                            <i class="fas fa-bolt"></i>
+                            Quick Actions
+                        </h3>
+                        <div class="actions-grid">
+                            <button class="action-btn" data-action="generate">
+                                <div class="action-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <span>Generate Session</span>
+                                <i class="fas fa-arrow-right action-arrow"></i>
+                            </button>
+                            <button class="action-btn" data-action="bulk">
+                                <div class="action-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <span>Bulk Generate</span>
+                                <i class="fas fa-arrow-right action-arrow"></i>
+                            </button>
+                            <button class="action-btn" data-action="backup">
+                                <div class="action-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <span>Backup Sessions</span>
+                                <i class="fas fa-arrow-right action-arrow"></i>
+                            </button>
+                            <button class="action-btn" data-action="monitor">
+                                <div class="action-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <span>Monitor Sessions</span>
+                                <i class="fas fa-arrow-right action-arrow"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="activity-card glass-card">
+                        <h3 class="section-title">
+                            <i class="fas fa-history"></i>
+                            Recent Activity
+                        </h3>
+                        <div class="activity-list" id="activity-list">
+                            <!-- Activities will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Pairing Strategies -->
+                    <div class strategies-card glass-card">
+                        <h3 class="section-title">
+                            <i class="fas fa-random"></i>
+                            Active Pairing Strategies
+                        </h3>
+                        <div class="strategies-grid">
+                            <div class="strategy-item active">
+                                <div class="strategy-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="strategy-info">
+                                    <h4>8-Digit Code</h4>
+                                    <p>Primary method</p>
+                                </div>
+                                <div class="strategy-status">
+                                    <span class="status-badge active">Active</span>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <div class="strategy-icon">
+                                    <i class="fas fa-sms"></i>
+                                </div>
+                                <div class="strategy-info">
+                                    <h4>SMS Fallback</h4>
+                                    <p>Secondary method</p>
+                                </div>
+                                <div class="strategy-status">
+                                    <span class="status-badge ready">Ready</span>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <div class="strategy-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="strategy-info">
+                                    <h4>Call Verification</h4>
+                                    <p>Tertiary method</p>
+                                </div>
+                                <div class="strategy-status">
+                                    <span class="status-badge ready">Ready</span>
+                                </div>
+                            </div>
+                            <div class="strategy-item">
+                                <div class="strategy-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="strategy-info">
+                                    <h4>Email Fallback</h4>
+                                    <p>Emergency method</p>
+                                </div>
+                                <div class="strategy-status">
+                                    <span class="status-badge ready">Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generator Page -->
+            <section id="generator" class="page">
+                <div class="generator-container">
+                    <div class="generator-header">
+                        <h2 class="page-title">
+                            <i class="fas fa-magic"></i>
+                            Advanced Session Generator
+                        </h2>
+                        <p class="page-subtitle">Create WhatsApp sessions with multiple fallback strategies</p>
+                    </div>
+
+                    <div class="generator-steps">
+                        <!-- Step Navigation -->
+                        <div class="step-navigation">
+                            <div class="step-progress">
+                                <div class="progress-line">
+                                    <div class="progress-fill" id="step-progress"></div>
+                                </div>
+                                <div class="step-dots">
+                                    <div class="step-dot active" data-step="1">
+                                        <div class="dot-number">1</div>
+                                        <div class="dot-label">Phone</div>
+                                    </div>
+                                    <div class="step-dot" data-step="2">
+                                        <div class="dot-number">2</div>
+                                        <div class="dot-label">Code</div>
+                                    </div>
+                                    <div class="step-dot" data-step="3">
+                                        <div class="dot-number">3</div>
+                                        <div class="dot-label">Verify</div>
+                                    </div>
+                                    <div class="step-dot" data-step="4">
+                                        <div class="dot-number">4</div>
+                                        <div class="dot-label">Session</div>
+                                    </div>
+                                    <div class="step-dot" data-step="5">
+                                        <div class="dot-number">5</div>
+                                        <div class="dot-label">Finish</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step Content -->
+                        <div class="step-content">
+                            <!-- Step 1: Phone Number -->
+                            <div class="step-pane active" data-step="1">
+                                <div class="step-header">
+                                    <h3><i class="fas fa-mobile-alt"></i> Enter Phone Number</h3>
+                                    <p>Provide your WhatsApp phone number with country code</p>
+                                </div>
+                                <div class="step-body">
+                                    <div class="phone-input-section">
+                                        <div class="input-group animated-input">
+                                            <div class="input-icon">
+                                                <i class="fas fa-flag"></i>
+                                            </div>
+                                            <select class="country-select" id="country-code">
+                                                <option value="+1">🇺🇸 +1 (USA)</option>
+                                                <option value="+44">🇬🇧 +44 (UK)</option>
+                                                <option value="+91">🇮🇳 +91 (India)</option>
+                                                <option value="+92" selected>🇵🇰 +92 (Pakistan)</option>
+                                                <option value="+62">🇮🇩 +62 (Indonesia)</option>
+                                                <option value="+55">🇧🇷 +55 (Brazil)</option>
+                                                <option value="+20">🇪🇬 +20 (Egypt)</option>
+                                                <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                                            </select>
+                                            <div class="input-divider"></div>
+                                            <input type="tel" 
+                                                   id="phone-number" 
+                                                   class="phone-input" 
+                                                   placeholder="Enter phone number" 
+                                                   pattern="[0-9]{10}"
+                                                   maxlength="10"
+                                                   required>
+                                            <div class="input-actions">
+                                                <button class="input-btn validate-btn" type="button">
+                                                    <i class="fas fa-check"></i>
+                                                    Validate
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="input-hint">
+                                            <i class="fas fa-info-circle"></i>
+                                            Enter phone number without country code (e.g., 3012345678)
+                                        </div>
+                                    </div>
+
+                                    <div class="advanced-options">
+                                        <div class="option-toggle">
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" id="advanced-toggle">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                            <span>Show Advanced Options</span>
+                                        </div>
+                                        <div class="options-grid" id="advanced-options" style="display: none;">
+                                            <div class="option-group">
+                                                <label>Session Name</label>
+                                                <input type="text" 
+                                                       id="session-name" 
+                                                       value="Abdullah-Md-Pro-Session"
+                                                       placeholder="Enter session name">
+                                            </div>
+                                            <div class="option-group">
+                                                <label>Security Level</label>
+                                                <select id="security-level">
+                                                    <option value="standard">Standard (128-bit)</option>
+                                                    <option value="high" selected>High (256-bit)</option>
+                                                    <option value="military">Military Grade</option>
+                                                </select>
+                                            </div>
+                                            <div class="option-group">
+                                                <label>Expiration</label>
+                                                <select id="session-expiry">
+                                                    <option value="7">7 Days</option>
+                                                    <option value="30" selected>30 Days</option>
+                                                    <option value="90">90 Days</option>
+                                                    <option value="never">Never</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-footer">
+                                    <button class="btn-next" data-next="2">
+                                        Continue
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Pairing Code -->
+                            <div class="step-pane" data-step="2">
+                                <div class="step-header">
+                                    <h3><i class="fas fa-qrcode"></i> Get Pairing Code</h3>
+                                    <p>Choose your preferred pairing method</p>
+                                </div>
+                                <div class="step-body">
+                                    <div class="pairing-methods">
+                                        <div class="methods-grid">
+                                            <div class="method-card active" data-method="code">
+                                                <div class="method-icon">
+                                                    <i class="fas fa-key"></i>
+                                                </div>
+                                                <h4>8-Digit Code</h4>
+                                                <p>Enter code in WhatsApp Web</p>
+                                                <div class="method-badge primary">Recommended</div>
+                                            </div>
+                                            <div class="method-card" data-method="sms">
+                                                <div class="method-icon">
+                                                    <i class="fas fa-sms"></i>
+                                                </div>
+                                                <h4>SMS Code</h4>
+                                                <p>Receive code via SMS</p>
+                                                <div class="method-badge">Fallback 1</div>
+                                            </div>
+                                            <div class="method-card" data-method="call">
+                                                <div class="method-icon">
+                                                    <i class="fas fa-phone"></i>
+                                                </div>
+                                                <h4>Call Verification</h4>
+                                                <p>Automated call with code</p>
+                                                <div class="method-badge">Fallback 2</div>
+                                            </div>
+                                            <div class="method-card" data-method="email">
+                                                <div class="method-icon">
+                                                    <i class="fas fa-envelope"></i>
+                                                </div>
+                                                <h4>Email Code</h4>
+                                                <p>Code sent to email</p>
+                                                <div class="method-badge">Fallback 3</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="code-display-section">
+                                            <div class="code-container">
+                                                <div class="code-header">
+                                                    <h4>Your Pairing Code</h4>
+                                                    <div class="code-timer">
+                                                        <i class="fas fa-clock"></i>
+                                                        <span id="code-timer">10:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="code-display" id="pairing-code">
+                                                    <div class="code-digits">
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                        <span class="digit">0</span>
+                                                    </div>
+                                                    <div class="code-actions">
+                                                        <button class="code-btn copy-btn">
+                                                            <i class="fas fa-copy"></i>
+                                                            Copy
+                                                        </button>
+                                                        <button class="code-btn refresh-btn">
+                                                            <i class="fas fa-redo"></i>
+                                                            Refresh
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="code-instructions">
+                                                    <h5><i class="fas fa-info-circle"></i> Instructions:</h5>
+                                                    <ol>
+                                                        <li>Open WhatsApp on your phone</li>
+                                                        <li>Go to Settings → Linked Devices</li>
+                                                        <li>Tap "Link a Device"</li>
+                                                        <li>Enter the 8-digit code above</li>
+                                                        <li>Click verify when done</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+
+                                            <div class="fallback-section">
+                                                <div class="fallback-header">
+                                                    <h5><i class="fas fa-shield-alt"></i> Fallback Systems Active</h5>
+                                                    <div class="fallback-status">
+                                                        <span class="status-dot active"></span>
+                                                        <span>3 Fallbacks Ready</span>
+                                                    </div>
+                                                </div>
+                                                <div class="fallback-list">
+                                                    <div class="fallback-item">
+                                                        <i class="fas fa-sms"></i>
+                                                        <span>SMS Code</span>
+                                                        <button class="btn-small" data-fallback="sms">
+                                                            Use This
+                                                        </button>
+                                                    </div>
+                                                    <div class="fallback-item">
+                                                        <i class="fas fa-phone"></i>
+                                                        <span>Call Verification</span>
+                                                        <button class="btn-small" data-fallback="call">
+                                                            Use This
+                                                        </button>
+                                                    </div>
+                                                    <div class="fallback-item">
+                                                        <i class="fas fa-envelope"></i>
+                                                        <span>Email Code</span>
+                                                        <button class="btn-small" data-fallback="email">
+                                                            Use This
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-footer">
+                                    <button class="btn-prev" data-prev="1">
+                                        <i class="fas fa-arrow-left"></i>
+                                        Back
+                                    </button>
+                                    <button class="btn-next" data-next="3">
+                                        I've Entered the Code
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Verification -->
+                            <div class="step-pane" data-step="3">
+                                <div class="step-header">
+                                    <h3><i class="fas fa-shield-check"></i> Verification</h3>
+                                    <p>Verifying WhatsApp connection</p>
+                                </div>
+                                <div class="step-body">
+                                    <div class="verification-animation">
+                                        <div class="verification-circle">
+                                            <div class="circle-ring"></div>
+                                            <div class="circle-ring delay-1"></div>
+                                            <div class="circle-ring delay-2"></div>
+                                            <div class="verification-icon">
+                                                <i class="fab fa-whatsapp"></i>
+                                            </div>
+                                        </div>
+                                        <div class="verification-steps">
+                                            <div class="verification-step active">
+                                                <div class="step-icon">
+                                                    <i class="fas fa-spinner fa-spin"></i>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h5>Connecting to WhatsApp</h5>
+                                                    <p>Establishing secure connection...</p>
+                                                </div>
+                                            </div>
+                                            <div class="verification-step">
+                                                <div class="step-icon">
+                                                    <i class="fas fa-mobile-alt"></i>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h5>Waiting for Verification</h5>
+                                                    <p>Please enter code on your phone...</p>
+                                                </div>
+                                            </div>
+                                            <div class="verification-step">
+                                                <div class="step-icon">
+                                                    <i class="fas fa-link"></i>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h5>Linking Device</h5>
+                                                    <p>Connecting your session...</p>
+                                                </div>
+                                            </div>
+                                            <div class="verification-step">
+                                                <div class="step-icon">
+                                                    <i class="fas fa-shield-alt"></i>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h5>Encrypting Session</h5>
+                                                    <p>Securing your data...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="connection-details">
+                                        <div class="details-grid">
+                                            <div class="detail-item">
+                                                <span class="detail-label">Status:</span>
+                                                <span class="detail-value status-connecting">
+                                                    <i class="fas fa-spinner fa-spin"></i>
+                                                    Connecting
+                                                </span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Phone:</span>
+                                                <span class="detail-value" id="verify-phone">+92 3012345678</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Session ID:</span>
+                                                <span class="detail-value" id="verify-session-id">WA_12345678</span>
+                                            </div>
+                                            <div class="detail-item">
+                                                <span class="detail-label">Attempt:</span>
+                                                <span class="detail-value">1/3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-footer">
+                                    <button class="btn-prev" data-prev="2">
+                                        <i class="fas fa-arrow-left"></i>
+                                        Back
+                                    </button>
+                                    <button class="btn-next" data-next="4" id="complete-verify">
+                                        Complete Verification
+                                        <i class="fas fa-forward"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Session Generation -->
+                            <div class="step-pane" data-step="4">
+                                <div class="step-header success">
+                                    <h3><i class="fas fa-trophy"></i> Session Generated!</h3>
+                                    <p>Your WhatsApp session is ready to use</p>
+                                </div>
+                                <div class="step-body">
+                                    <div class="success-animation">
+                                        <div class="confetti-container"></div>
+                                        <div class="success-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <h3 class="success-title">Session Created Successfully!</h3>
+                                        <p class="success-message">Your WhatsApp session is now active and ready to use</p>
+                                    </div>
+
+                                    <div class="session-details-card">
+                                        <div class="session-header">
+                                            <div class="session-icon">
+                                                <i class="fab fa-whatsapp"></i>
+                                            </div>
+                                            <div class="session-info">
+                                                <h4 id="final-session-name">Abdullah-Md-Pro-Session</h4>
+                                                <p id="final-phone">+92 3012345678</p>
+                                            </div>
+                                            <div class="session-status-badge active">
+                                                Active
+                                            </div>
+                                        </div>
+                                        <div class="session-details">
+                                            <div class="detail-row">
+                                                <span>Session ID:</span>
+                                                <code id="final-session-id">WA_ABCD1234EFGH</code>
+                                                <button class="copy-btn-small" data-copy="session-id">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span>Pairing Code:</span>
+                                                <code id="final-pair-code">1234-5678</code>
+                                                <button class="copy-btn-small" data-copy="pair-code">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span>Created:</span>
+                                                <span id="final-created">Just now</span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span>Expires:</span>
+                                                <span class="expiry-badge" id="final-expiry">30 days</span>
+                                            </div>
+                                            <div class="detail-row">
+                                                <span>Security:</span>
+                                                <span class="security-badge" id="final-security">256-bit</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="download-options">
+                                        <h4><i class="fas fa-download"></i> Download Options</h4>
+                                        <div class="download-buttons">
+                                            <button class="download-btn" data-format="json">
+                                                <i class="fas fa-file-code"></i>
+                                                JSON File
+                                            </button>
+                                            <button class="download-btn" data-format="txt">
+                                                <i class="fas fa-file-alt"></i>
+                                                Text File
+                                            </button>
+                                            <button class="download-btn" data-format="env">
+                                                <i class="fas fa-cog"></i>
+                                                ENV File
+                                            </button>
+                                            <button class="download-btn" data-format="zip">
+                                                <i class="fas fa-file-archive"></i>
+                                                Complete Package
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="implementation-code">
+                                        <div class="code-header">
+                                            <h4><i class="fas fa-code"></i> Implementation Code</h4>
+                                            <div class="code-tabs">
+                                                <button class="code-tab active" data-lang="baileys">Baileys</button>
+                                                <button class="code-tab" data-lang="whatsapp-web">WhatsApp-Web.js</button>
+                                                <button class="code-tab" data-lang="python">Python</button>
+                                                <button class="code-tab" data-lang="php">PHP</button>
+                                            </div>
+                                        </div>
+                                        <div class="code-preview">
+                                            <pre id="baileys-code">
+const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys');
+const fs = require('fs');
+const P = require('pino');
+
+async function connectWhatsApp() {
+    // Load your session
+    const { state, saveCreds } = await useMultiFileAuthState('./sessions/abdullah-md-pro');
+    
+    const sock = makeWASocket({
+        version: [2, 2413, 1],
+        logger: P({ level: 'silent' }),
+        printQRInTerminal: false,
+        auth: state,
+        browser: ['Abdullah-Md Pro Bot', 'Chrome', '121.0.0.0'],
+        syncFullHistory: false,
+        generateHighQualityLinkPreview: true,
+        emitOwnEvents: true,
+        defaultQueryTimeoutMs: 0,
+    });
+
+    // Connection events
+    sock.ev.on('connection.update', (update) => {
+        const { connection, lastDisconnect } = update;
+        if (connection === 'open') {
+            console.log('✅ WhatsApp connected successfully!');
+        }
+        if (connection === 'close') {
+            const shouldReconnect = (lastDisconnect?.error)?.output?.statusCode !== DisconnectReason.loggedOut;
+            if (shouldReconnect) {
+                console.log('🔄 Reconnecting...');
+                connectWhatsApp();
+            }
+        }
+    });
+
+    // Save credentials when updated
+    sock.ev.on('creds.update', saveCreds);
+
+    // Message events
+    sock.ev.on('messages.upsert', (m) => {
+        console.log('New message:', m);
+    });
+
+    return sock;
+}
+
+// Connect
+connectWhatsApp().catch(console.error);</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-footer">
+                                    <button class="btn-action" id="test-session">
+                                        <i class="fas fa-bolt"></i>
+                                        Test Session
+                                    </button>
+                                    <button class="btn-action secondary" id="dashboard-btn">
+                                        <i class="fas fa-home"></i>
+                                        Go to Dashboard
+                                    </button>
+                                    <button class="btn-action primary" id="new-session">
+                                        <i class="fas fa-plus"></i>
+                                        New Session
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Pages (Sessions, API, Analytics, Settings) -->
+            <!-- Due to character limit, I'll show the structure -->
+            <section id="sessions" class="page">
+                <!-- Sessions Management Page -->
+            </section>
+
+            <section id="api" class="page">
+                <!-- API Documentation Page -->
+            </section>
+
+            <section id="analytics" class="page">
+                <!-- Analytics Dashboard -->
+            </section>
+
+            <section id="settings" class="page">
+                <!-- Settings Page -->
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Abdullah-Md Pro</h4>
+                    <p>Professional WhatsApp Session Generator v4.0</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#"><i class="fas fa-book"></i> Documentation</a>
+                    <a href="#"><i class="fas fa-video"></i> Tutorials</a>
+                    <a href="#"><i class="fas fa-code"></i> API Reference</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Support</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <div class="tech-stack">
+                        <span class="tech-item">@whiskeysockets/baileys</span>
+                        <span class="tech-item">Node.js v18+</span>
+                        <span class="tech-item">WebSocket</span>
+                        <span class="tech-item">PM2</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">MongoDB</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>System Status</h4>
+                    <div class="system-status">
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span>API Server</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span>WhatsApp Service</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span>Database</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot online"></span>
+                            <span>Fallback System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Abdullah-Md Pro WhatsApp Generator | Made with <i class="fas fa-heart"></i> for Developers</p>
+                <div class="footer-actions">
+                    <button class="footer-btn" id="report-bug">
+                        <i class="fas fa-bug"></i>
+                        Report Bug
+                    </button>
+                    <button class="footer-btn" id="feature-request">
+                        <i class="fas fa-lightbulb"></i>
+                        Request Feature
+                    </button>
+                    <button class="footer-btn" id="donate">
+                        <i class="fas fa-coffee"></i>
+                        Buy Coffee
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    
+    <div class="modal" id="quick-generate-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Quick Generate</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Quick generate form -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Audio Elements -->
+    <audio id="success-sound" src="public/assets/sounds/success.mp3" preload="auto"></audio>
+    <audio id="notification-sound" src="public/assets/sounds/notification.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="public/assets/sounds/error.mp3" preload="auto"></audio>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="public/assets/js/particles.js"></script>
+    <script src="public/assets/js/confetti.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
